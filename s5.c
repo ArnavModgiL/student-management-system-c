@@ -1,11 +1,11 @@
-// College DaTaBase SysTem [small C ProjecT ---
+// College DaTaBase SysTem [small C ProjecT  ] ---
 
 #include<stdio.h>
 #include <string.h>
 
 #define MAX 100
 
-//Structure for Student -
+//Structure for Student ---
 
 struct student {
     int id;
@@ -18,7 +18,7 @@ struct student {
 struct student students[MAX];
 int count = 0;
 
-// Function to Add Student
+// Function to Add Student ---
 
 void addStudent() {
     printf("\nEnter Student Id: ");
@@ -41,7 +41,7 @@ void addStudent() {
     printf("\nStudent Added Successfully!\n");
 }
 
-// Function to Display Students
+// Function to Display Students --
 
 void displayStudents() {
     if(count == 0) {
@@ -62,7 +62,8 @@ void displayStudents() {
     }
 }
 
-//Function to search Student
+//Function to search Student---
+
 void searchStudent() {
     int id;
     printf("\n Enter Studen ID to search: ");
@@ -81,7 +82,8 @@ void searchStudent() {
     printf("\nStudent Not Found!\n");
 }
 
-// Function To Update Student 
+// Function To Update Student ---
+
 void updateStudent() {
     int id;
     printf("Enter Student ID to Update: ");
@@ -102,7 +104,8 @@ void updateStudent() {
     printf("\nStudent not Found!\n");
 }
 
-// Function Delete Student
+// Function Delete Student---
+
 void deleteStudent() {
     int id;
     printf("\n Enter Student ID to delete: ");
