@@ -21,17 +21,26 @@ int count = 0;
 // Function to Add Student ---
 
 void addStudent() {
+    if(count >= MAX) {
+        printf("\nDATABASE FULL!\n");
+        return;
+    }
+    
     printf("\nEnter Student Id: ");
     scanf("%d", &students[count].id);
+    getchar(); // Buffer se newline ko saaf karne ke liye -
 
     printf("Enter Name: ");
     scanf("%[^\n]", students[count].name);
+    getchar();
 
     printf("Enter Age: ");
     scanf("%d", &students[count].age);
+    getchar();
 
     printf("Enter Course: ");
     scanf("%[^\n]", students[count].course);
+    getchar();
 
     printf("Enter Marks: ");
     scanf("%f",&students[count].marks);
@@ -56,7 +65,7 @@ void displayStudents() {
         printf("\nStudent %d\n", i+1);
         printf("ID: %d\n",students[i].id);
         printf("Name: %s\n",students[i].name);
-        printf("Age: %d\n",students[i].course);
+        printf("Age: %d\n",students[i].age);
         printf("Course: %s\n",students[i].course);
         printf("Makrs: %.2f\n",students[i].marks);
     }
@@ -72,7 +81,8 @@ void searchStudent() {
     for(int i = 0; i < count; i++) {
         if(students[i].id == id) {
             printf("\nStudent Found!\n");
-            printf("Name: %d\n",students[i].age);
+            printf("Name: %d\n",students[i].name);
+            printf("Age: %d\n",students[i].age);
             printf("Course: %s\n",students[i].course);
             printf("Marks: %.2f\n", students[i].marks);
             return;
@@ -91,6 +101,7 @@ void updateStudent() {
 
     for(int i = 0; i < count ; i++) {
         if(students[i].id == id) {
+            getchar(); // Buffer clear
             printf("\nEnter New Name: ");
             scanf("%[^\n]",students[i].name);
 
@@ -137,7 +148,9 @@ int main() {
         printf("6. EXIT\n ");
 
         printf("\nEnter choice: ");
-        scanf("%d",&choice);
+        if(scanf("%d", &choice) != 1) {
+            while(getchar() != '\n');
+            continue;
 
         switch(choice) {
 
