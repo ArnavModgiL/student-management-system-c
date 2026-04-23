@@ -67,7 +67,7 @@ void displayStudents() {
         printf("Name: %s\n",students[i].name);
         printf("Age: %d\n",students[i].age);
         printf("Course: %s\n",students[i].course);
-        printf("Makrs: %.2f\n",students[i].marks);
+        printf("Marks: %.2f\n",students[i].marks);
     }
 }
 
@@ -81,7 +81,7 @@ void searchStudent() {
     for(int i = 0; i < count; i++) {
         if(students[i].id == id) {
             printf("\nStudent Found!\n");
-            printf("Name: %d\n",students[i].name);
+            printf("Name: %s\n",students[i].name);
             printf("Age: %d\n",students[i].age);
             printf("Course: %s\n",students[i].course);
             printf("Marks: %.2f\n", students[i].marks);
@@ -104,6 +104,7 @@ void updateStudent() {
             getchar(); // Buffer clear
             printf("\nEnter New Name: ");
             scanf("%[^\n]",students[i].name);
+            getchar();
 
             printf("Enter New Marks: ");
             scanf("%f", &students[i].marks);
@@ -129,17 +130,17 @@ void deleteStudent() {
             }
             count --;
 
-            printf("\n student Delete Successfully!\n");
+            printf("\nstudent Delete Successfully!\n");
         }
     }
-    printf("\nStudent Not Found!\n");
+    printf("\nStudent  Not Found!\n");
 }
 
 int main() {
     int choice;
 
     while(1) {
-        printf("\n\n == COLLEGE DATEBASE SYSTEM ====\n");
+        printf("\n\n == COLLEGE DATABASE SYSTEM ====\n");
         printf("1. Add Student\n");
         printf("2. Display Students\n");
         printf("3. Search student\n");
@@ -151,6 +152,7 @@ int main() {
         if(scanf("%d", &choice) != 1) {
             while(getchar() != '\n');
             continue;
+        }
 
         switch(choice) {
 
