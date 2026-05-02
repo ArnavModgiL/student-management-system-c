@@ -1,7 +1,7 @@
 // College DaTaBase SysTem [small C ProjecT  ] ---
 
 #include<stdio.h>
-#include <string.h>
+#include <string.h> 
 
 #define MAX 100
 
