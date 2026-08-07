@@ -1,4 +1,4 @@
-// College DaTaBase SysTem [small C ProjecT  ] --- 
+// College DaTaBase SysTem [small C ProjecT  ] --->
 
 #include<stdio.h>
 #include <string.h> 
