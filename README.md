@@ -1,4 +1,4 @@
-# 🎓 Student Management System in C :-
+# 🎓 Student Management System in C :->
 
 A **menu-driven Student Management System** built using the **C programming language**.
 This project demonstrates the use of **structures, arrays, functions, and basic data management techniques** to store and manipulate student records.
