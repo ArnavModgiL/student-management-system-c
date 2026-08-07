@@ -1,4 +1,3 @@
-
 # 🎓 Student Management System in C :-
 
 A **menu-driven Student Management System** built using the **C programming language**.
